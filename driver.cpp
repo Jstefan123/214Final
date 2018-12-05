@@ -5,11 +5,6 @@
 //  Created by John Landy on 12/5/18.
 //
 
-#include <stdio.h>
-#include <string>
-#include <vector>
-#include <iostream>
-#include <fstream>
 #include "database.h"
 #include "sign.h"
 

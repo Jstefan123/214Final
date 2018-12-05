@@ -1,4 +1,5 @@
 #include "sign.h"
+#include <string>
 
 class Database {
 
