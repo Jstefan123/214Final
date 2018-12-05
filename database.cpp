@@ -11,22 +11,40 @@ void Database::train() {
 	//iterate through the files in the text files and create the appropriate signs and spans
 	while (fin >> file) {
 
-		//read in the sign name and number of images
-		signName = file;
-		fin >> numImages;
 
 		//loop through the images
 		for (unsigned i = 0; i < numImages; ++i) {
 
-			Sign sign;
+			//read in the sign name and number of images
+			signName = file;
+			fin >> numImages;
+
+			//create the Span for this sign
+			Span span;
 
 			//loop through the text files for this image
-			for (unsigned i = 0; i < numImages * 3; ++i) {
+			for (unsigned i = 0; i < 3; ++i) {
+
+				fin >> file;
 
 				//stream that reads the pixel values from a text file
 				std::ifstream pixelRead;
-					
-				fin >> file;
+				//open the stream
+				pixelRead.open(file);
+
+				//if it is a red pixel file
+				if (i == 0) {
+
+					//while (
+				}
+				//else if it is a green pixel file
+				else if (i == 1) {
+
+				}
+				//else it is a blue pixel file
+				else {
+
+				}
 
 			}
 		}
