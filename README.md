@@ -7,7 +7,7 @@ This project uses linear algebra and simple but effective machine learning conce
 ### Key Concepts
 Using the span of several images for each sign, our project calculates the minimum error of projection onto the span of each different image in the database, and thus predicts the road sign. 
 
-### Optimization Opportuninties
+### Expansion Opportuninties
 Added functionality of this project could work in basic machine learning conepts by adding images to the database as they are categorized. This would allow the program to grow more accurate as it takes in more input.
 
 Edge detection could also be used with signs containing numbers (speed limit, interstate, etc.) to further optimize. This kind of technology could be used in autonomous vehicles to determine the speed limit, the number of the interstate, and more.
