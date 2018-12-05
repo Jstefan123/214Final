@@ -97,14 +97,17 @@ std::vector <double>& projection(std::vector <double> &v1, std::vector <double> 
 //returns the discrepancy betwen the pixel matrices from projecting the vectors
 //of query onto the corresponding vectors in this sign
 double getError(Sign &query) {
+
     // Get the projections
     std::vector<double> redProj = projection(redPix, query.redPix);
     std::vector<double> greenProj = projection(greenPix, query.greenPix);
     std::vector<double> blueProj = projection(bluePix, query.bluePix);
+
     // Find magnitudes
-    double redMag = findMagnitude(redProj);
-    double greenMag = findMagnitude(greenMag);
-    double blueMag = findMagnitude(blueMag);
+	double mag = findMagnitude(redProj);
+    mag += findMagnitude(greenMag);
+    mag += findMagnitude(blueMag);
+
     // Return the sum of all the channels' projection magnitudes
     return redMag + greenMag + blueMag;
 }
