@@ -25,12 +25,12 @@ void Database::train() {
 			//create this individual sign
 			Sign sign;
 
-			//loop through the text files for this image
+			//loop through the rgb text files for this image
 			for (unsigned i = 0; i < 3; ++i) {
 
 				//set the three pixel vectors for this sign in the span
 				std::string red, green, blue;
-				fin >> red >> green >> blue;
+				fileRead >> red >> green >> blue;
 				sign.readInImagePixels(red, green, blue);
 			}
 
