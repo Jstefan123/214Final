@@ -38,25 +38,21 @@ void Database::train() {
 // Uses the various span errors to predict the road sign of the inputted image
 std::string Database::predictSign(Sign &query) {
 
-    // Keep track of the minimum span and the element at which it occurred
-    std::string nameMinError = data[0].name;
+	// Keep track of the minimum span and the element at which it occurred
+	std::string nameMinError = data[0].name;
 
-    double minError = data[0].getSpanError;
+	double minError = data[0].getSpanError;
 
-    // Edge case: accounting for when size is 0 to avoid segfault
-    if (data.size() > 0) {
+	// Iterate through the vector of spans
+	for (unsigned i = 1; i < data.size(); ++i) {
 
-        // Iterate through the vector of spans
-        for (unsigned i = 1; i < data.size(); ++i) {
+		// Reset the minimum when necessary
+		if (data[i].getSpanError < minError) {
 
-            // Reset the minimum when necessary
-            if (data[i].getSpanError < minError) {
-
-                minError = data[i].getSpanError;
-                nameMinError = data[i].name;
-            }
-        }
-    }
-    // Return the final minimum
-    return nameMinError;
+			minError = data[i].getSpanError;
+			nameMinError = data[i].name;
+		}
+	}
+	// Return the final minimum
+	return nameMinError;
 }
