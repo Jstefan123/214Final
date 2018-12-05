@@ -60,8 +60,38 @@ void Sign::readInImagePixels(std::string &redFile, std::string &blueFile, std::s
 	read.close();
 }
 
-std::vector <int>& projection(std::vector <int> &p1, std::vector <int &p2) {
+//returns the magnitude of a vector
+double findMagnitude(std::vector <double> &v) {
 
+	double mag = 0;
+
+	//square each value 
+	for (auto val : p) {
+		mag += std::pow(val, 2);
+	}
+
+	//return the square root
+	return std::sqrt(mag);
+}
+
+//projection of v1 onto v2
+std::vector <double>& projection(std::vector <double> &v1, std::vector <double> &v2) {
+
+	double dotProd;
+
+	//dot product the two vectors
+	for (unsigned i = 0; i < v1.size(); ++i) {
+		dotProd += (v1[i] * v2[i]);
+	}
+
+	dotProd /= findMagnitude(v2);
+
+	//multiply this by v2 to get projection
+
+	for (auto &val : v2) {
+		val *= dotProd;
+	}
+	return v2;
 }
 
 //returns the discrepancy betwen the pixel matrices from projecting the vectors
