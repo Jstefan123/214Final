@@ -17,5 +17,9 @@ private:
 	std::vector <Span> data;
 
 public:
+	//returns the discrepancy betwen the pixel matrices from projecting the vectors
+	//of query onto the corresponding vectors in this sign in the span
+	double getSpanError(Span &data, Sign &query) {
 
+	}
 };

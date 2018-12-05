@@ -60,8 +60,6 @@ void Sign::readInImagePixels(std::string &redFile, std::string &blueFile, std::s
 	read.close();
 }
 
-//returns the discrepancy betwen the pixel matrices from projecting the vectors
-//of query onto the corresponding vectors in this sign
-double Sign::getError(Sign &query) {
+std::vector <int>& projection(std::vector <int> &p1, std::vector <int &p2) {
 
 }
