@@ -1,4 +1,3 @@
-//each sign is represented by the name and number of images for that sign
 one_way 3
 oneway_1_red.txt
 oneway_1_green.txt

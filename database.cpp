@@ -31,6 +31,31 @@ private:
 
 public:
 
+	void train() {
+		std::ifstream fin;
+		fin.open("fileName.txt");
+
+		std::string file;
+		std::string signName;
+		int numImages;
+
+		//iterate through the files in the text files and create the appropriate signs and spans
+		while (fin >> file) {
+
+			//read in the sign name and number of images
+			signName = file;
+			fin >> numImages;
+
+			//loop through the image text files
+			for (unsigned i = 0; i < numImages * 3; ++i) {
+				fin >> file;
+
+			}
+
+		}
+
+	}
+
 	// Uses the various span errors to predict the road sign of the inputted image
     std::string predictSign(Sign &query) {
 

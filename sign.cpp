@@ -61,7 +61,7 @@ void Sign::readInImagePixels(std::string &redFile, std::string &blueFile, std::s
 }
 
 //returns the magnitude of a vector
-double findMagnitude(std::vector <double> &v) {
+double Sign::findMagnitude(std::vector <double> &v) {
 
 	double mag = 0;
 
@@ -75,7 +75,7 @@ double findMagnitude(std::vector <double> &v) {
 }
 
 //projection of v1 onto v2
-std::vector <double>& projection(std::vector <double> &v1, std::vector <double> &v2) {
+std::vector <double>& Sign::projection(std::vector <double> &v1, std::vector <double> &v2) {
 
 	double dotProd;
 
@@ -96,7 +96,7 @@ std::vector <double>& projection(std::vector <double> &v1, std::vector <double> 
 
 //returns the discrepancy betwen the pixel matrices from projecting the vectors
 //of query onto the corresponding vectors in this sign
-double getError(Sign &query) {
+double Sign::getError(Sign &query) {
 
     // Get the projections
     std::vector<double> redProj = projection(redPix, query.redPix);
