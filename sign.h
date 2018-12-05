@@ -34,4 +34,13 @@ public:
 	//of query onto the corresponding vectors in this sign
 	double getError(Sign &query);
 
+	//returns the magnitude of a vector
+	double Sign::findMagnitude(std::vector <double> &v);
+
+	//projection of v1 onto v2
+	std::vector <double>& Sign::projection(std::vector <double> &v1, std::vector <double> &v2);
+
+	//returns the discrepancy betwen the pixel matrices from projecting the vectors
+	//of query onto the corresponding vectors in this sign
+	double Sign::getError(Sign &query);
 };

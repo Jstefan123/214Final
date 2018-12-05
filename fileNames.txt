@@ -1,0 +1,60 @@
+one_way 3
+oneway_1_red.txt
+oneway_1_green.txt
+oneway_1_blue.txt
+oneway_2_red.txt
+oneway_2_green.txt
+oneway_2_blue.txt
+oneway_3_red.txt
+oneway_3_green.txt
+oneway_3_blue.txt
+handicap_parking 3
+park_1_red.txt
+park_1_green.txt
+park_1_blue.txt
+park_2_red.txt
+park_2_green.txt
+park_2_blue.txt
+park_3_red.txt
+park_3_green.txt
+park_3_blue.txt
+road_work 3
+rw_1_red.txt
+rw_1_green.txt
+rw_1_blue.txt
+rw_2_red.txt
+rw_2_green.txt
+rw_2_blue.txt
+rw_3_red.txt
+rw_3_green.txt
+rw_3_blue.txt
+yield 3
+yield_1_red.txt
+yield_1_green.txt
+yield_1_blue.txt
+yield_2_red.txt
+yield_2_green.txt
+yield_2_blue.txt
+yield_3_red.txt
+yield_3_green.txt
+yield_3_blue.txt
+railroad_crossing 3
+RR1_1_red.txt
+RR1_green.txt
+RR1.blue.txt
+RR2_1_red.txt
+RR2_green.txt
+RR2.blue.txt
+RR3_1_red.txt
+RR3_green.txt
+RR3.blue.txt
+stop 3
+stop_1_red.txt
+stop_1_green.txt
+stop_1_blue.txt
+stop_2_red.txt
+stop_2_green.txt
+stop_2_blue.txt
+stop_3_red.txt
+stop_3_green.txt
+stop_3_blue.txt
