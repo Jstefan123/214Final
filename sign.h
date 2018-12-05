@@ -1,7 +1,7 @@
 #include <vector>
 #include<cmath>
 #include <iostream>
-#include <ifstream>
+#include <fstream>
 
 //the color of the layer of the image
 enum class Color { red, green, blue };
@@ -12,9 +12,9 @@ private:
 
 	//vectors representing the red, green, blue pixels in the image
 	//16x16 images
-	std::vector <int> redPix;
-	std::vector <int> greenPix;
-	std::vector <int> bluePix;
+	std::vector <double> redPix;
+	std::vector <double> greenPix;
+	std::vector <double> bluePix;
 
 public:
 
@@ -22,13 +22,15 @@ public:
 	Sign();
 
 	//reads in the red pixel of an imgae
-	void readInRedPixels(std::string &fileName);
+	void readInRedPixels(std::ifstream &read, std::string &fileName);
 
 	//reads in the red pixel of an imgae
-	void readInBluePixels(std::string &fileName);
+	void readInBluePixels(std::ifstream &read, std::string &fileName);
 
 	//reads in the green pixel of an imgae
-	void readInGreenPixels(std::string &fileName);
+	void readInGreenPixels(std::ifstream &read, std::string &fileName);
+
+	void readInImagePixels(std::string &redFile, std::string &blueFile, std::string &greenFile);
 
 	//returns the discrepancy betwen the pixel matrices from projecting the vectors
 	//of query onto the corresponding vectors in this sign
@@ -38,7 +40,7 @@ public:
 	double findMagnitude(std::vector <double> &v);
 
 	//projection of v1 onto v2
-	std::vector <double>& Sign::projection(std::vector <double> &v1, std::vector <double> &v2);
+	std::vector <double> projection(std::vector <double> &v1, std::vector <double> &v2);
 
 	//returns the discrepancy betwen the pixel matrices from projecting the vectors
 	//of query onto the corresponding vectors in this sign

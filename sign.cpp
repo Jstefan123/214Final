@@ -5,7 +5,7 @@
 Sign::Sign() {
 	redPix.reserve(256);
 	greenPix.reserve(256);
-	bluePixPix.reserve(256);
+	bluePix.reserve(256);
 }
 
 //reads in the red pixel of an imgae
@@ -66,7 +66,7 @@ double Sign::findMagnitude(std::vector <double> &v) {
 	double mag = 0;
 
 	//square each value 
-	for (auto val : p) {
+	for (auto val : v) {
 		mag += std::pow(val, 2);
 	}
 
@@ -75,7 +75,7 @@ double Sign::findMagnitude(std::vector <double> &v) {
 }
 
 //projection of v1 onto v2
-std::vector <double>& Sign::projection(std::vector <double> &v1, std::vector <double> &v2) {
+std::vector <double> Sign::projection(std::vector <double> &v1, std::vector <double> &v2) {
 
 	double dotProd;
 
@@ -105,9 +105,9 @@ double Sign::getError(Sign &query) {
 
     // Find magnitudes
 	double mag = findMagnitude(redProj);
-    mag += findMagnitude(greenMag);
-    mag += findMagnitude(blueMag);
+    mag += findMagnitude(greenProj);
+    mag += findMagnitude(blueProj);
 
     // Return the sum of all the channels' projection magnitudes
-    return redMag + greenMag + blueMag;
+	return mag;
 }

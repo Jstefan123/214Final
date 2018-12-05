@@ -1,36 +1,42 @@
 #include "database.h"
 
 void Database::train() {
-	std::ifstream fin;
-	fin.open("fileName.txt");
+
+	std::fstream fileRead;
+	fileRead.open("fileName.txt");
 
 	std::string file;
-	std::string signName;
 	int numImages;
 
 	//iterate through the files in the text files and create the appropriate signs and spans
-	while (fin >> file) {
+	while (fileRead >> file) {
+
+		//create the Span for this sign
+		Span span;
 
 		//read in the sign name and number of images
-		signName = file;
-		fin >> numImages;
+		span.name = file;
+
+		fileRead >> numImages;
 
 		//loop through the images
 		for (unsigned i = 0; i < numImages; ++i) {
-
+			
+			//create this individual sign
 			Sign sign;
 
 			//loop through the text files for this image
-			for (unsigned i = 0; i < numImages * 3; ++i) {
+			for (unsigned i = 0; i < 3; ++i) {
 
-				//stream that reads the pixel values from a text file
-				std::ifstream pixelRead;
-					
-				fin >> file;
-
+				//set the three pixel vectors for this sign in the span
+				std::string red, green, blue;
+				fin >> red >> green >> blue;
+				sign.readInImagePixels(red, green, blue);
 			}
-		}
 
+			//add the sign to the span
+			span.signs.push_back(sign);
+		}
 	}
 
 }
