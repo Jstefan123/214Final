@@ -14,5 +14,5 @@ Edge detection could also be used with signs containing numbers (speed limit, in
 
 Implementation of least squares to further optimize the error calculation could allow the project to gain accuracy. This topic is currently being looked into.
 
-###### Text File Format
+### fileNames.txt Format
 Our program works by reading in only one text file manually. While the number of text files is actually very large due to the large database of our program, we can accomplish this by formatting our text file to efficiently find the other text files. For each sign, our text file reads in the name, the number of corresponding text files that should go into the database (three times the number of images for red, blue, and green channels respectively), and each of those files below. Our program can read input efficiently using fstream objects to fill the database quickly.
