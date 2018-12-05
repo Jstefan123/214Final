@@ -15,13 +15,14 @@ private:
         //returns the discrepancy betwen the pixel matrices from projecting the vectors
         //of query onto the corresponding vectors in this sign in the span
         double getSpanError(Sign &query) {
+
             double totError = 0;
             // Iterate through the vector of signs
             for (unsigned i = 0; i < signs.size(); ++i) {
                 // At each sign, add the error
                 totError += query.getError(signs[i]);
             }
-            return totError;
+            return totError / signs.size();
         }
 	};
 
