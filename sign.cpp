@@ -45,13 +45,18 @@ void Sign::readInImagePixels(std::string &redFile, std::string &blueFile, std::s
 
 	//ifstream to read in image
 	std::ifstream read;
-	read.open(fileName);
 
 	//load up each of the pixel vectors
+	read.open(redFile);
 	readInRedPixels(read, redFile);
-	readInGreenPixels(read, greenFile);
-	readInBluePixels(read, blueFile);
+	read.close();
 
+	read.open(greenFile);
+	readInGreenPixels(read, greenFile);
+	read.close();
+
+	read.open(blueFile);
+	readInBluePixels(read, blueFile);
 	read.close();
 }
 
