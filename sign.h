@@ -9,9 +9,6 @@ class Sign {
 
 private:
 
-	//name of the traffic sign
-	std::string name;
-
 	//vectors representing the red, green, blue pixels in the image
 	//16x16 images
 	std::vector <int> redPix;
