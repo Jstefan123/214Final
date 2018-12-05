@@ -1,5 +1,5 @@
 # Final Project: Traffic Sign Recognition
-##### Contributors: Aric Landy, John Landy, John Stefan
+##### Contributors: John Stefan, Aric Landy, John Landy
 
 ### Introduction
 This project uses linear algebra and simple but effective machine learning concepts in order to recognize traffic signs. 
