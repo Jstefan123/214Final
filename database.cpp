@@ -39,18 +39,14 @@ public:
 
         double minError = data[0].getSpanError;
 
-        // Edge case: accounting for when size is 0 to avoid segfault
-        if (data.size() > 0) {
+        // Iterate through the vector of spans
+        for (unsigned i = 1; i < data.size(); ++i) {
 
-            // Iterate through the vector of spans
-            for (unsigned i = 1; i < data.size(); ++i) {
+            // Reset the minimum when necessary
+            if (data[i].getSpanError < minError) {
 
-                // Reset the minimum when necessary
-                if (data[i].getSpanError < minError) {
-
-                    minError = data[i].getSpanError;
-                    nameMinError = data[i].name;
-                }
+                minError = data[i].getSpanError;
+                nameMinError = data[i].name;
             }
         }
         // Return the final minimum
