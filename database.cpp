@@ -3,7 +3,7 @@
 void Database::train() {
 
 	std::fstream fileRead;
-	fileRead.open("fileName.txt");
+	fileRead.open("fileNames.txt");
 
 	std::string file;
 	unsigned numImages;
@@ -31,6 +31,12 @@ void Database::train() {
 				//set the three pixel vectors for this sign in the span
 				std::string red, green, blue;
 				fileRead >> red >> green >> blue;
+
+				//add the folder name in front of the file names
+				red = "Normalized_Database_RGB/" + red;
+				green = "Normalized_Database_RGB/" + green;
+				blue = "Normalized_Database_RGB/" + blue;
+
 				sign.readInImagePixels(red, green, blue);
 			}
 
