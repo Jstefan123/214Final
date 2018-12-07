@@ -32,7 +32,12 @@ int main() {
 		std::string prediction = d.predictSign(sign);
 		std::cout << "Prediction: " << prediction << '\n';
 
-		std::cout << "Image: stop_sign" << '\n';
+		std::cout << "Image: ";
+
+		//read in correct prediction
+		std::cin >> testFile;
+		std::cout << testFile << '\n';
+		std::cout << '\n';
 	}
 
 	return 0;
