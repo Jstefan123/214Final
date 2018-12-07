@@ -23,7 +23,7 @@ private:
 				// At each sign, add the error
 				totError += query.getError(signs[i]);
 			}
-			return totError / signs.size();
+			return totError / (double)signs.size();
 		}
 	};
 

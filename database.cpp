@@ -6,7 +6,7 @@ void Database::train() {
 	fileRead.open("fileName.txt");
 
 	std::string file;
-	int numImages;
+	unsigned numImages;
 
 	//iterate through the files in the text files and create the appropriate signs and spans
 	while (fileRead >> file) {
@@ -47,15 +47,18 @@ std::string Database::predictSign(Sign &query) {
 	// Keep track of the minimum span and the element at which it occurred
 	std::string nameMinError = data[0].name;
 
-	double minError = data[0].getSpanError;
+	double minError = data[0].getSpanError(query);
 
 	// Iterate through the vector of spans
 	for (unsigned i = 1; i < data.size(); ++i) {
 
 		// Reset the minimum when necessary
-		if (data[i].getSpanError < minError) {
 
-			minError = data[i].getSpanError;
+		double error = data[i].getSpanError(query);
+
+		if (error < minError) {
+
+			minError = error;
 			nameMinError = data[i].name;
 		}
 	}

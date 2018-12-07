@@ -6,7 +6,6 @@
 //
 
 #include "database.h"
-#include "sign.h"
 
 int main(int argc, char *argv[]) {
     // Create an instance of the Database class
@@ -24,4 +23,7 @@ int main(int argc, char *argv[]) {
     // Predict the sign from the vector of signs
     std::string prediction = d.predictSign(sign);
     std::cout << prediction << std::endl;
+
+	std::cout << argc;
+	return 0;
 }

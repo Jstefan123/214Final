@@ -22,13 +22,13 @@ public:
 	Sign();
 
 	//reads in the red pixel of an imgae
-	void readInRedPixels(std::ifstream &read, std::string &fileName);
+	void readInRedPixels(std::ifstream &read);
 
 	//reads in the red pixel of an imgae
-	void readInBluePixels(std::ifstream &read, std::string &fileName);
+	void readInBluePixels(std::ifstream &read);
 
 	//reads in the green pixel of an imgae
-	void readInGreenPixels(std::ifstream &read, std::string &fileName);
+	void readInGreenPixels(std::ifstream &read);
 
 	void readInImagePixels(std::string &redFile, std::string &blueFile, std::string &greenFile);
 
@@ -41,8 +41,4 @@ public:
 
 	//projection of v1 onto v2
 	std::vector <double> projection(std::vector <double> &v1, std::vector <double> &v2);
-
-	//returns the discrepancy betwen the pixel matrices from projecting the vectors
-	//of query onto the corresponding vectors in this sign
-	double getError(Sign &query);
 };

@@ -9,7 +9,7 @@ Sign::Sign() {
 }
 
 //reads in the red pixel of an imgae
-void Sign::readInRedPixels(std::ifstream &read, std::string &fileName) {
+void Sign::readInRedPixels(std::ifstream &read) {
 
 	int value;
 
@@ -20,7 +20,7 @@ void Sign::readInRedPixels(std::ifstream &read, std::string &fileName) {
 }
 
 //reads in the red pixel of an imgae
-void Sign::readInBluePixels(std::ifstream &read, std::string &fileName) {
+void Sign::readInBluePixels(std::ifstream &read) {
 
 	int value;
 
@@ -31,7 +31,7 @@ void Sign::readInBluePixels(std::ifstream &read, std::string &fileName) {
 }
 
 //reads in the green pixel of an imgae
-void Sign::readInGreenPixels(std::ifstream &read, std::string &fileName) {
+void Sign::readInGreenPixels(std::ifstream &read) {
 
 	int value;
 
@@ -48,15 +48,15 @@ void Sign::readInImagePixels(std::string &redFile, std::string &blueFile, std::s
 
 	//load up each of the pixel vectors
 	read.open(redFile);
-	readInRedPixels(read, redFile);
+	readInRedPixels(read);
 	read.close();
 
 	read.open(greenFile);
-	readInGreenPixels(read, greenFile);
+	readInGreenPixels(read);
 	read.close();
 
 	read.open(blueFile);
-	readInBluePixels(read, blueFile);
+	readInBluePixels(read);
 	read.close();
 }
 
@@ -77,7 +77,7 @@ double Sign::findMagnitude(std::vector <double> &v) {
 //projection of v1 onto v2
 std::vector <double> Sign::projection(std::vector <double> &v1, std::vector <double> &v2) {
 
-	double dotProd;
+	double dotProd = 0;
 
 	//dot product the two vectors
 	for (unsigned i = 0; i < v1.size(); ++i) {
