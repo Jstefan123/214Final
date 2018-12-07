@@ -109,7 +109,7 @@ double Sign::getError(Sign &query) {
     mag += mag_of_diff(blueProj, bluePix);
 
     // Return the sum of all the channels' projection magnitudes
-	return mag;
+    return mag;
 }
 
 
