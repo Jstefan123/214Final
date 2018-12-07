@@ -98,7 +98,7 @@ RR_4_blue.txt
 RR_5_red.txt
 RR_5_green.txt
 RR_5_blue.txt
-stop 5
+stop 4
 stop_1_red.txt
 stop_1_green.txt
 stop_1_blue.txt
@@ -108,9 +108,6 @@ stop_2_blue.txt
 stop_3_red.txt
 stop_3_green.txt
 stop_3_blue.txt
-stop_4_red.txt
-stop_4_green.txt
-stop_4_blue.txt
 stop_5_red.txt
 stop_5_green.txt
 stop_5_blue.txt
