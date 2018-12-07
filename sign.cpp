@@ -99,9 +99,9 @@ std::vector <double> Sign::projection(std::vector <double> &v1, std::vector <dou
 double Sign::getError(Sign &query) {
 
     // Get the projections
-    std::vector<double> redProj = projection(redPix, query.redPix);
-    std::vector<double> greenProj = projection(greenPix, query.greenPix);
-    std::vector<double> blueProj = projection(bluePix, query.bluePix);
+    std::vector<double> redProj = projection(query.redPix, redPix);
+    std::vector<double> greenProj = projection(query.greenPix, greenPix);
+    std::vector<double> blueProj = projection(query.bluePix, bluePix);
 
     // Find magnitudes
 	double mag = findMagnitude(redProj);
