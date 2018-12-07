@@ -1,4 +1,4 @@
-Test_Signs.txt/RR_Test
+Test_Signs_txt/RR_test
 railroad_crossing
-Test_Signs.txt/stop_test
+Test_Signs_txt/stop_test
 stop
