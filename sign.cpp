@@ -103,11 +103,6 @@ double Sign::getError(Sign &query) {
     std::vector<double> greenProj = projection(query.greenPix, greenPix);
     std::vector<double> blueProj = projection(query.bluePix, bluePix);
 
-    // Find magnitudes
-	double mag = findMagnitude(redProj);
-    mag += findMagnitude(greenProj);
-    mag += findMagnitude(blueProj);
-
     // Return the sum of all the channels' projection magnitudes
-	return mag;
+	return findMagnitude(redProj) + findMagnitude(greenProj) + findMagnitude(blueProj);
 }
