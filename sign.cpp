@@ -93,11 +93,13 @@ std::vector <double> Sign::projection(std::vector <double> &v1, std::vector <dou
         val *= dotProd;
     }
     return v2;
+
 }
 
 //returns the discrepancy betwen the pixel matrices from projecting the vectors
 //of query onto the corresponding vectors in this sign
 double Sign::getError(Sign &span_sign) {
+
     
     // Get the projections
     std::vector<double> redProj = projection(redPix, span_sign.redPix);

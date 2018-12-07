@@ -44,4 +44,5 @@ public:
     
     // Returns the magnitude of the difference between two vectors
     double mag_of_diff(std::vector <double> &v1, std::vector <double> &v2);
+
 };
