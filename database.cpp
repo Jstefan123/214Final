@@ -25,24 +25,22 @@ void Database::train() {
 			//create this individual sign
 			Sign sign;
 
-			//loop through the rgb text files for this image
-			for (unsigned i = 0; i < 3; ++i) {
+			//set the three pixel vectors for this sign in the span
+			std::string red, green, blue;
+			fileRead >> red >> green >> blue;
 
-				//set the three pixel vectors for this sign in the span
-				std::string red, green, blue;
-				fileRead >> red >> green >> blue;
+			//add the folder name in front of the file names
+			red = "Normalized_Database_RGB/" + red;
+			green = "Normalized_Database_RGB/" + green;
+			blue = "Normalized_Database_RGB/" + blue;
 
-				//add the folder name in front of the file names
-				red = "Normalized_Database_RGB/" + red;
-				green = "Normalized_Database_RGB/" + green;
-				blue = "Normalized_Database_RGB/" + blue;
-
-				sign.readInImagePixels(red, green, blue);
-			}
+			sign.readInImagePixels(red, green, blue);
 
 			//add the sign to the span
 			span.signs.push_back(sign);
 		}
+		//push back the span onto the database
+		data.push_back(span);
 	}
 
 }

@@ -41,7 +41,7 @@ void Sign::readInGreenPixels(std::ifstream &read) {
 	}
 }
 
-void Sign::readInImagePixels(std::string &redFile, std::string &blueFile, std::string &greenFile) {
+void Sign::readInImagePixels(std::string &redFile, std::string &greenFile, std::string &blueFile) {
 
 	//ifstream to read in image
 	std::ifstream read;
