@@ -39,15 +39,15 @@ yield_3_red.txt
 yield_3_green.txt
 yield_3_blue.txt
 railroad_crossing 3
-RR1_1_red.txt
-RR1_green.txt
-RR1.blue.txt
-RR2_1_red.txt
-RR2_green.txt
-RR2.blue.txt
-RR3_1_red.txt
-RR3_green.txt
-RR3.blue.txt
+RR_1_red.txt
+RR_1_green.txt
+RR_1_blue.txt
+RR_2_red.txt
+RR_2_green.txt
+RR_2_blue.txt
+RR_3_red.txt
+RR_3_green.txt
+RR_3_blue.txt
 stop 3
 stop_1_red.txt
 stop_1_green.txt
