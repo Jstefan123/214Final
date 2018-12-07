@@ -2,3 +2,11 @@ Test_Signs_txt/RR_test
 railroad_crossing
 Test_Signs_txt/stop_test
 stop
+Test_Signs_txt/do_not_enter_test
+do_not_enter
+Test_Signs_txt/oneway_test
+one_way
+Test_Signs_txt/pedestrian_crossing_test
+pedestrian_crossing
+Test_Signs_txt/yield_test
+yield
