@@ -104,10 +104,23 @@ double Sign::getError(Sign &query) {
     std::vector<double> blueProj = projection(bluePix, query.bluePix);
 
     // Find magnitudes
-	double mag = findMagnitude(redProj);
-    mag += findMagnitude(greenProj);
-    mag += findMagnitude(blueProj);
+	double mag = mag_of_diff(redProj, redPix);
+    mag += mag_of_diff(greenProj, greenPix);
+    mag += mag_of_diff(blueProj, bluePix);
 
     // Return the sum of all the channels' projection magnitudes
 	return mag;
+}
+
+
+// Returns the magnitude of the difference between two vectors
+double Sign::mag_of_diff(std::vector <double> &v1, std::vector <double> &v2){
+    
+    double mag_diff = 0;
+    
+    for (unsigned i = 0; i < (unsigned)v1.size(); ++i){
+        mag_diff += std::abs(v2[i] - v1[i]);
+    }
+    
+    return std::sqrt(mag_diff);
 }

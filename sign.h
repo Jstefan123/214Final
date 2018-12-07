@@ -41,4 +41,7 @@ public:
 
 	//projection of v1 onto v2
 	std::vector <double> projection(std::vector <double> &v1, std::vector <double> &v2);
+    
+    // Returns the magnitude of the difference between two vectors
+    double mag_of_diff(std::vector <double> &v1, std::vector <double> &v2)
 };
