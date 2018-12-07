@@ -75,7 +75,8 @@ double Sign::findMagnitude(std::vector <double> &v) {
 }
 
 //projection of v1 onto v2
-std::vector <double> Sign::projection(std::vector <double> &v1, std::vector <double> &v2) {
+//v2 not by reference to avoid changing v2
+std::vector <double> Sign::projection(std::vector <double> &v1, std::vector <double> v2) {
 
 	double dotProd = 0;
 
@@ -84,7 +85,7 @@ std::vector <double> Sign::projection(std::vector <double> &v1, std::vector <dou
 		dotProd += (v1[i] * v2[i]);
 	}
 
-	dotProd /= findMagnitude(v2);
+	dotProd /= std::pow(findMagnitude(v2),2);
 
 	//multiply this by v2 to get projection
 
@@ -96,17 +97,16 @@ std::vector <double> Sign::projection(std::vector <double> &v1, std::vector <dou
 
 //returns the discrepancy betwen the pixel matrices from projecting the vectors
 //of query onto the corresponding vectors in this sign
-double Sign::getError(Sign &query) {
+double Sign::getError(Sign &span_sign) {
 
     // Get the projections
-    std::vector<double> redProj = projection(redPix, query.redPix);
-    std::vector<double> greenProj = projection(greenPix, query.greenPix);
-    std::vector<double> blueProj = projection(bluePix, query.bluePix);
+    std::vector<double> redProj = projection(redPix, span_sign.redPix);
+    std::vector<double> greenProj = projection(greenPix, span_sign.greenPix);
+    std::vector<double> blueProj = projection(bluePix, span_sign.bluePix);
 
-    // Find magnitudes
-	double mag = mag_of_diff(redProj, redPix);
-    mag += mag_of_diff(greenProj, greenPix);
-    mag += mag_of_diff(blueProj, bluePix);
+	double mag = mag_of_diff(redProj, span_sign.redPix);
+    mag += mag_of_diff(greenProj, span_sign.greenPix);
+    mag += mag_of_diff(blueProj, span_sign.bluePix);
 
     // Return the sum of all the channels' projection magnitudes
     return mag;
