@@ -66,7 +66,7 @@ rw_4_blue.txt
 rw_5_red.txt
 rw_5_green.txt
 rw_5_blue.txt
-yield 5
+yield 4
 yield_1_red.txt
 yield_1_green.txt
 yield_1_blue.txt
@@ -76,9 +76,6 @@ yield_2_blue.txt
 yield_3_red.txt
 yield_3_green.txt
 yield_3_blue.txt
-yield_4_red.txt
-yield_4_green.txt
-yield_4_blue.txt
 yield_5_red.txt
 yield_5_green.txt
 yield_5_blue.txt

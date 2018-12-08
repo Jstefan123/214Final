@@ -3,7 +3,7 @@
     % values of each of the color channels to 3 txt files
 
 % Read in the image
-img = imread('stop_sign.jpg');
+img = imread('yield3.jpg');
 
 % Resize the image to be 16x16 for simpler processing
 small_img = imresize(img, [16, 16]);
@@ -14,6 +14,6 @@ green = small_img(:,:,2);
 blue = small_img(:,:,3);
 
 % Create the txt files for each color channel
-dlmwrite('red_chan.txt', red, ' ');
-dlmwrite('green_chan.txt', green, ' ');
-dlmwrite('blue_chan.txt', blue, ' ');
+dlmwrite('yield_3_red.txt', red, ' ');
+dlmwrite('yield_3_green.txt', green, ' ');
+dlmwrite('yield_3_blue.txt', blue, ' ');
