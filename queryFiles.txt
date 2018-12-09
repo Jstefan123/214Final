@@ -10,3 +10,5 @@ Test_Signs_txt/pedestrian_crossing_test
 pedestrian_crossing
 Test_Signs_txt/yield_test
 yield
+Test_Signs_txt/park_test
+handicap_parking
