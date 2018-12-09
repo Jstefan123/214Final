@@ -3,7 +3,7 @@
     % values of each of the color channels to 3 txt files
 
 % Read in the image
-img = imread('oneway_test.jpg');
+img = imread('rw_test2.jpg');
 
 % Resize the image to be 16x16 for simpler processing
 small_img = imresize(img, [16, 16]);
@@ -14,6 +14,6 @@ green = small_img(:,:,2);
 blue = small_img(:,:,3);
 
 % Create the txt files for each color channel
-dlmwrite('oneway_test_red.txt', red, ' ');
-dlmwrite('oneway_test_green.txt', green, ' ');
-dlmwrite('oneway_test_blue.txt', blue, ' ');
+dlmwrite('rw_test_2_red.txt', red, ' ');
+dlmwrite('rw_test_2_green.txt', green, ' ');
+dlmwrite('rw_test_2_blue.txt', blue, ' ');

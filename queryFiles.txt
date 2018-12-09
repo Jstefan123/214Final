@@ -14,3 +14,5 @@ Test_Signs_txt/park_test
 handicap_parking
 Test_Signs_txt/rw_test
 road_work
+Test_Signs_txt/rw_test2
+road_work
