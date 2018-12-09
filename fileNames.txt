@@ -1,4 +1,4 @@
-one_way 5
+one_way 4
 oneway_1_red.txt
 oneway_1_green.txt
 oneway_1_blue.txt
@@ -11,9 +11,6 @@ oneway_3_blue.txt
 oneway_4_red.txt
 oneway_4_green.txt
 oneway_4_blue.txt
-oneway_5_red.txt
-oneway_5_green.txt
-oneway_5_blue.txt
 do_not_enter 3
 do_not_enter_1_red.txt
 do_not_enter_1_blue.txt
@@ -66,7 +63,7 @@ rw_4_blue.txt
 rw_5_red.txt
 rw_5_green.txt
 rw_5_blue.txt
-yield 4
+yield 3
 yield_1_red.txt
 yield_1_green.txt
 yield_1_blue.txt
@@ -76,9 +73,6 @@ yield_2_blue.txt
 yield_3_red.txt
 yield_3_green.txt
 yield_3_blue.txt
-yield_5_red.txt
-yield_5_green.txt
-yield_5_blue.txt
 railroad_crossing 5
 RR_1_red.txt
 RR_1_green.txt
