@@ -46,26 +46,46 @@ void Database::train() {
 }
 
 // Uses the various span errors to predict the road sign of the inputted image
-std::string Database::predictSign(Sign &query) {
+//return a pair of pairs
+//{ {prediction name, prediction error} , {nextClosest name, nextClosest error}}
+std::pair < std::pair <std::string, double >, std::pair <std::string, double > > Database::predictSign(Sign &query) {
 
 	// Keep track of the minimum span and the element at which it occurred
 	std::string nameMinError = data[0].name;
+	std::string nameNextMinError = data[1].name;
 
 	double minError = data[0].getSpanError(query);
+	double nextMinError = data[1].getSpanError(query);
+
+	if (nextMinError < minError) {
+		std::swap(minError, nextMinError);
+		std::swap(nameMinError, nameNextMinError);
+	}
 
 	// Iterate through the vector of spans
-	for (unsigned i = 1; i < data.size(); ++i) {
+	for (unsigned i = 2; i < data.size(); ++i) {
 
 		// Reset the minimum when necessary
 
 		double error = data[i].getSpanError(query);
 
-		if (error < minError) {
+		if (error < nextMinError) {
 
-			minError = error;
-			nameMinError = data[i].name;
+			if (error < minError) {
+
+				//set old minError to the next minError
+				nextMinError = minError;
+				nameNextMinError = nameMinError;
+
+				minError = error;
+				nameMinError = data[i].name;
+			}
+			else {
+				nextMinError = error;
+				nameNextMinError = data[i].name;
+			}
 		}
 	}
-	// Return the final minimum
-	return nameMinError;
+	// Return the stuff as specified at the comment above the function header
+	return { {nameMinError, minError}, {nameNextMinError, nextMinError} };
 }

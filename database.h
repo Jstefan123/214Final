@@ -36,5 +36,7 @@ public:
 	void train();
 
 	// Uses the various span errors to predict the road sign of the inputted image
-	std::string predictSign(Sign &query);
+	//return a pair of pairs
+	//{ {prediction name, prediction error} , {nextClosest name, nextClosest error}}
+	std::pair < std::pair <std::string, double >, std::pair <std::string, double > > predictSign(Sign &query);
 };
