@@ -14,9 +14,9 @@ Test_Signs_txt/park_test
 handicap_parking
 Test_Signs_txt/rw_test
 road_work
-
 Test_Signs_txt/rw_test2
-
 road_work
 Test_Signs_txt/do_not_enter_test_2
 do_not_enter
+Test_Signs_txt/RR_test_2
+railroad_crossing
