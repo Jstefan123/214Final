@@ -1,4 +1,4 @@
-# Final Project: Traffic Sign Recognition
+# Traffic Sign Recognition
 ##### Contributors: Aric Landy, John Landy, John Stefan
 
 ### Introduction
